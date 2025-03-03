@@ -66,15 +66,63 @@
 
 <!-- Texto que Te Ama 😍 -->
 <div class="love__message">
-  <h1>Te quiero más que a nadie en mi vida ❤️</h1>
-	<h2>En ti cada dia es nuevo, unico y especial</h2>
-	<h2>recibe con amor y cariño este pequeño gesto para ti</h2>
+  <h1><br>Te quiero más que a nadie en mi vida ❤️<br/></h1>
+	<h2><br>En ti cada dia es nuevo y especial<br/></h2>
+	<h1><br>que la pases bonito<br/></h1>
+		<br><br/>
 </div>
 
-<audio autoplay loop>
+<!-- Galería de Imágenes -->
+<div class="gallery">
+  <img src="img1.jpg" alt="Foto 1" onclick="showMessage('Un día, cualquier día, vamos a estar volando.'); playMusic('audio1')">
+  <audio id="audio1">
     <source src="cerati.mp3" type="audio/mp3">
-    Tu navegador no soporta el audio.
-</audio>
+  </audio>
+
+  <img src="img2.jpeg" alt="Foto 2" onclick="showMessage('En tus ojos, en tu alma, voy a estar perdiéndome.'); playMusic('audio2')">
+  <audio id="audio2">
+    <source src="cerati2.mp3" type="audio/mp3">
+  </audio>
+
+  <img src="img3.jpg" alt="Foto 3" onclick="showMessage('Siempre serás la mejor parte de mi vida ❤️'); playMusic('audio3')">
+  <audio id="audio3">
+    <source src="cold1.mp3" type="audio/mp3">
+  </audio>
+</div>
+
+<div id="message-box" class="message-box"></div>
+
+
+<!--
+
+
+-->
+
+<script>
+  function playMusic(id) {
+    const audios = document.querySelectorAll("audio");
+    audios.forEach(audio => audio.pause());
+    const music = document.getElementById(id);
+    music.currentTime = 0;
+    music.play();
+  }
+
+  function showMessage(message) {
+    const messageBox = document.getElementById("message-box");
+    messageBox.innerHTML = message;
+    messageBox.style.display = "block";
+    setTimeout(() => {
+      messageBox.style.display = "none";
+    }, 4000);
+  }
+</script>
+
+<div class="boton-descarga">
+        <a href="HBD.mp4" download="HBD.mp4">
+            <button>Descargar Archivo</button>
+        </a>
+    </div>
+
 
 <!--
    

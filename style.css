@@ -5,14 +5,74 @@ body {
 
   .love__message {
     position: absolute;
-    top: 40%; /* Ajustamos para que se vea debajo de la luna */
-    left:50%;
+    top: 35%; /* Ajustamos para que se vea debajo de la luna */
+    left:62%;
     transform: translate(-50%, -50%);
     text-align: center;
     font-size: 20px;
     color: white;
     font-family: 'Courier New', monospace;
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+
+  }
+
+   .play-button {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ff4d6d;
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 77, 109, 0.8);
+    animation: latidos 1.5s infinite alternate;
+  }
+
+  .play-button:hover {
+    background: #ff6b81;
+  }
+
+  .gallery {
+    position: absolute;
+    top: 47%;
+    left: 61.5%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  }
+
+  .gallery img {
+    width: 150px;
+    height: 150px;
+    border-radius: 30px;
+    transition: transform 0.9s;
+    cursor: pointer;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.1);
+  }
+
+  .message-box {
+    position: absolute;
+    bottom: 16%;
+    left: 48%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 6px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    display: none;
     animation: brillo 2s infinite alternate;
   }
 
@@ -26,6 +86,50 @@ body {
       transform: scale(1.1);
     }
   }
+
+  @keyframes latidos {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.2);
+    }
+  }
+
+
+
+/* Estilo general para el botón */
+.boton-descarga {
+    position: fixed;
+    bottom: 20px; /* Ubicación en la parte inferior */
+    left: 61.5%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+/* Estilo para el botón */
+.boton-descarga button {
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Efecto hover para el botón */
+.boton-descarga button:hover {
+    background-color: #45a049;
+}
+
+
+
+
+
+
 
 
 
